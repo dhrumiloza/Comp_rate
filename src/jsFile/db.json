@@ -1,0 +1,33 @@
+{
+    "jobs": [
+     {
+       "jobTitle": "cloudEngineer",
+       "level": "junior",
+       "region": "region1",
+       "hourlyWageRate": 22.66,
+       "hourlyBillRate": 66.46
+     },
+     {
+       "jobTitle": "cloudEngineer",
+       "level": "midLevel",
+       "region": "region1",
+       "hourlyWageRate": 28.06,
+       "hourlyBillRate": 56.11
+     },
+     {
+       "jobTitle": "cloudEngineer",
+       "level": "senior",
+       "region": "region1",
+       "hourlyWageRate": 33.23,
+       "hourlyBillRate": 66.46
+     },
+     {
+       "jobTitle": "cloudEngineer",
+       "level": "expert",
+       "region": "region1",
+       "hourlyWageRate": 36.34,
+       "hourlyBillRate": 72.68
+     }
+   ]
+ }
+ 
