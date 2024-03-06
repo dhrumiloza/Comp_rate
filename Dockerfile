@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk-slim AS build
+FROM openjdk:17.0.2-jdk-slim AS build
 
 WORKDIR /app
 
@@ -12,7 +12,7 @@ RUN ./gradlew build --no-daemon
 
 RUN ./gradlew bootJar --no-daemon
 
-FROM openjdk:17-jre-slim
+FROM openjdk:17.0.2-jdk-slim
 
 WORKDIR /app
 
