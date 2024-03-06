@@ -7,8 +7,9 @@ COPY build.gradle settings.gradle gradlew /app/
 COPY src /app/src/main/java/GreyCellProjectApplication
 
 
-RUN chmod +x ./gradlew
 RUN ./gradlew build --no-daemon
+
+RUN icacls ./gradlew /grant Everyone:(F)
 
 RUN ./gradlew bootJar --no-daemon
 
