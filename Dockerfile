@@ -1,14 +1,10 @@
-# Use the official OpenJDK image as a base image
-FROM openjdk:17
+ FROM maven:3.8.5-openjdk-17 AS build
+ COPY . .
+ RUN mvn clean package -DskipTests
 
-# Set the working directory inside the container
-WORKDIR /app
+ FROM openjdk:17.0.1-jdk-slim
 
-# Add the Spring Boot application JAR file to the container
-ADD target/greycell-project-application.jar greycell-project-application.jar
+ COPY --from=build /target/demo-0.0.1-SNAPSHOT.jar demo.jar
 
-# Expose the port your application runs on
-EXPOSE 8080
-
-# Set the entry point for the container
-ENTRYPOINT ["java", "-jar", "greycell-project-application.jar"]
+ EXPOSE 8000
+ ENTRYPOINT ["java","-jar","demo.jar"]
